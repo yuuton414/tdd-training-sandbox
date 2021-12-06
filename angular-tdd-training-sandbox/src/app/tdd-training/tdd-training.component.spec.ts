@@ -30,4 +30,5 @@ describe('TddTrainingComponent', () => {
   it('title が取得できている', () => {
     expect(component.title).toEqual('TDD Training');
   });
+  
 });
