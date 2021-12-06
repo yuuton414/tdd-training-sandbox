@@ -29,23 +29,30 @@ describe('TddTrainingService', () => {
 
       describe('その他の数のときはそのまま文字列に変換する', () => {
         it('1を渡すと文字列1を返す', () => {
-          expect("1").toEqual(service.convertFizzBuzz(1));
+          expect('1').toEqual(service.convertFizzBuzz(1));
         });
     
-        it('2を渡すと文字列2を返す', () => {
-          expect("2").toEqual(service.convertFizzBuzz(2));
+        // // 三角測量で出たUnitテスト -> いらなくなる
+        // it('2を渡すと文字列2を返す', () => {
+        //   expect('2').toEqual(service.convertFizzBuzz(2));
+        // });
+      });
+
+      describe('15の倍数のときは FizzBuzz を返す', () => {
+        it('15を渡すと文字列 FizzBuzz を返す', () => {
+          expect('FizzBuzz').toEqual(service.convertFizzBuzz(15));
         });
       });
       
       describe('5の倍数のときはBuzzを返す', () => {
         it('5を渡すと文字列Buzzを返す', () => {
-          expect("Buzz").toEqual(service.convertFizzBuzz(5));
+          expect('Buzz').toEqual(service.convertFizzBuzz(5));
         });
       });
 
       describe('3の倍数のときはFizzを返す', () => {
         it('3を渡すと文字列Fizzを返す', () => {
-          expect("Fizz").toEqual(service.convertFizzBuzz(3));
+          expect('Fizz').toEqual(service.convertFizzBuzz(3));
         });
       });
       
